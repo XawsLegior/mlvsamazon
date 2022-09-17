@@ -1,0 +1,90 @@
+body{
+  background: url('../Imagens/fundo.png') no-repeat;
+  background-size: 100% 100%;
+  background-attachment:fixed;
+  min-height: 100vh;
+}
+
+/* ========== ESPECIAIS ========== */
+.space_top_20{
+  margin-top: 20px;
+}
+
+/* ========== PRINCIPAL ========== */
+@keyframes anim1 {
+  10% {border-top: 2px solid blue;}
+  30% {border-right: 2px solid blue;}
+  60% {border-bottom: 2px solid blue;}
+  90% {border-left: 2px solid blue;}
+  100% {border: 2px solid blue;}
+}
+.fundo_inicial{
+  margin-left: 10%;
+  margin-right: 10%;
+  background: rgb(255, 255, 255, 0.4);
+  padding: 10px;
+  border-radius: 5px;
+  min-height: 60vh;
+}
+
+.icon_inicial{
+  font-size: 60px;
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 2s; /* don't forget to set a duration! */
+  color: black;
+}
+
+.fundo_inicial p{
+  color: black;
+  margin-left: 15px;
+  font-family: cursive;
+  font-size: 15px;
+  margin-top: 0px;
+}
+
+.busca{
+  border: 2px solid black;
+  border-radius: 2px;
+  background: darkorange;
+  color: black;
+  height: 20px;
+  padding-right: 30px;
+  animation: anim1 3s infinite alternate;
+  outline: none;
+  margin-bottom: 10px;
+}
+
+.busca::placeholder{
+  color: black;
+}
+
+.lupa_inicial{
+  position: absolute;
+  margin-left: -20px;
+  margin-top: 2px;
+  color: black;
+}
+
+.titulo{
+  color: darkorange;
+  text-shadow: 3px 3px black;
+  font-family: sans-serif;
+}
+
+/* ========== anim_buscando_prod ========== */
+@keyframes anim2{
+    0%{transform: rotate(0);}
+    100%{transform: rotate(360deg);}
+}
+
+.styl1, .styl2, .styl3{
+  border: 3px solid black;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: black;
+  height: 10px;
+  width: 5px;
+  display: inline-block;
+  margin-left: 2px;
+  animation: anim2 2s infinite;
+}
